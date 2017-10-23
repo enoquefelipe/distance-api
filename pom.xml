@@ -28,6 +28,7 @@
 		<jackson.version>2.9.0</jackson.version>
 		<mysql.version>6.0.6</mysql.version>
 		<log4j.version>1.2.17</log4j.version>
+		<h2.version>1.4.191</h2.version>
 
 	</properties>
 
@@ -67,6 +68,18 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2.version}</version>
 		</dependency>
 
 	</dependencies>

@@ -1,13 +1,23 @@
 package com.maxipago.model;
 
-public class City {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class City implements Comparable<City> {
+
+	@Id
 	private Long id;
 	private String name;
 	private String latitude;
 	private String longitude;
 
 	// Getters and Setters
+
+	@Override
+	public String toString() {
+		return "City: " + name;
+	}
 
 	public Long getId() {
 		return id;
@@ -43,14 +53,24 @@ public class City {
 
 	public static void main(String[] args) throws java.lang.Exception {
 
-		System.out.println(distance(-23.5505199, -46.63330939999997, -22.9068467, -43.17289649999998, "M") + " Miles\n");
-		System.out.println(distance(32.9697, -96.80322, 29.46786, -98.53506, "K") + " Kilometers\n");
+		// System.out.println(distance(-23.5505199, -46.63330939999997, -22.9068467, -43.17289649999998, "M") + "
+		// Miles\n");
+		// System.out.println(distance(32.9697, -96.80322, 29.46786, -98.53506, "K") + " Kilometers\n");
 
 	}
 
-	private static double distance(double lat1, double lon1, double lat2, double lon2, String unit) {
-		double theta = lon1 - lon2;
-		double dist = Math.sin(deg2rad(lat1)) * Math.sin(deg2rad(lat2)) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.cos(deg2rad(theta));
+	// public static double distance(double lat1, double lon1, double lat2, double lon2, String unit) {
+	public static Combination distance(City origen, City destino, String unit) {
+
+		Double longitudeOrigem = new Double(origen.getLongitude());
+		Double latitudeOrigem = new Double(origen.getLatitude());
+
+		Double longitudeDestino = new Double(destino.getLongitude());
+		Double latitudeDestino = new Double(destino.getLatitude());
+
+		double theta = longitudeOrigem - longitudeDestino;
+		double dist = Math.sin(deg2rad(latitudeOrigem)) * Math.sin(deg2rad(latitudeDestino))
+				+ Math.cos(deg2rad(latitudeOrigem)) * Math.cos(deg2rad(latitudeDestino)) * Math.cos(deg2rad(theta));
 		dist = Math.acos(dist);
 		dist = rad2deg(dist);
 		dist = dist * 60 * 1.1515;
@@ -58,7 +78,12 @@ public class City {
 			dist = dist * 1.609344;
 		}
 
-		return (dist);
+		Combination comb = new Combination();
+		comb.setOriginCity(origen.getName());
+		comb.setDestinationCity(destino.getName());
+		comb.setDistance(dist);
+
+		return comb;
 	}
 
 	/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
@@ -73,6 +98,11 @@ public class City {
 	/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 	private static double rad2deg(double rad) {
 		return (rad * 180 / Math.PI);
+	}
+
+	@Override
+	public int compareTo(City city) {
+		return 0;
 	}
 
 }

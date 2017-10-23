@@ -4,9 +4,14 @@ public class Combination {
 
 	private String originCity;
 	private String destinationCity;
-	private String distance;
+	private Double distance;
 
 	// Getters and Setters
+
+	@Override
+	public String toString() {
+		return "Origin: " + originCity + ", Destination: " + destinationCity + ", Distance: " + distance;
+	}
 
 	public String getOriginCity() {
 		return originCity;
@@ -24,11 +29,11 @@ public class Combination {
 		this.destinationCity = destinationCity;
 	}
 
-	public String getDistance() {
+	public Double getDistance() {
 		return distance;
 	}
 
-	public void setDistance(String distance) {
+	public void setDistance(Double distance) {
 		this.distance = distance;
 	}
 
