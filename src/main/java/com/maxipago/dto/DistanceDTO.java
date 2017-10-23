@@ -4,13 +4,18 @@ import java.util.List;
 
 import com.maxipago.model.Combination;
 
+/**
+ * 
+ * @author enoque.felipe
+ *
+ */
 public class DistanceDTO {
 
 	private int records;
-	private List<Combination> combinations;
 	private String message;
+	private List<Combination> combinations;
 
-	// Getters and Setters
+	/* Getters and Setters */
 
 	public List<Combination> getCombinations() {
 		return combinations;

@@ -13,6 +13,11 @@ import com.maxipago.dao.CityRepository;
 import com.maxipago.model.City;
 import com.maxipago.model.Combination;
 
+/**
+ * 
+ * @author enoque.felipe
+ *
+ */
 @Service
 public class CityService {
 
@@ -26,12 +31,11 @@ public class CityService {
 		return repositoryJDBC.findAll();
 	}
 
-	public List<Combination> getCombinations(String parametro) throws SQLException {
+	public List<Combination> getCombinations(String unit) throws SQLException {
 
 		List<City> cities = repository.findAll();
 		// List<City> cities = repositoryJDBC.findAll();
 		List<Combination> combinations = new ArrayList<>();
-		// cities.forEach(s -> System.out.println(s));
 
 		for (City city : cities) {
 
@@ -40,7 +44,7 @@ public class CityService {
 			while (iterator.hasNext()) {
 				City next = iterator.next();
 				if (!city.equals(next)) {
-					combinations.add(City.distance(city, next, parametro));
+					combinations.add(City.distance(city, next, unit));
 				}
 			}
 		}
