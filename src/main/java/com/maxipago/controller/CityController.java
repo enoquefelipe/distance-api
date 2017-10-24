@@ -46,7 +46,7 @@ public class CityController {
 			dto.setMessage("Failed to get results");
 		}
 
-		return new ResponseEntity<>(dto, HttpStatus.OK);
+		return new ResponseEntity<DistanceDTO>(dto, HttpStatus.OK);
 
 	}
 

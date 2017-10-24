@@ -21,20 +21,17 @@ import com.maxipago.model.Combination;
 public class CityService {
 
 	@Autowired
-	private CityDAO repositoryJDBC;
-
-//	@Autowired
-//	private CityRepository repository;
+	private CityDAO repository;
 
 	public List<City> findAllJDBC() throws SQLException {
-		return repositoryJDBC.findAll();
+		return repository.findAll();
 	}
 
 	public List<Combination> getCombinations(String unit) throws SQLException {
 
-//		List<City> cities = repository.findAll();
-		List<City> cities = repositoryJDBC.findAll();
-		List<Combination> combinations = new ArrayList<>();
+		List<City> cities = repository.findAll();
+		
+		List<Combination> combinations = new ArrayList<Combination>();
 
 		for (City city : cities) {
 

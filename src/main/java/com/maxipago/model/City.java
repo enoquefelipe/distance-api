@@ -5,10 +5,8 @@ package com.maxipago.model;
  * @author enoque.felipe
  *
  */
-//@Entity
-public class City implements Comparable<City> {
+public class City {
 
-//	@Id
 	private Long id;
 	private String name;
 	private String latitude;
@@ -54,7 +52,7 @@ public class City implements Comparable<City> {
 	}
 
 	/* end Getters and Setters */
-	
+
 	public static Combination distance(City origen, City destino, String unit) {
 
 		double longitudeOrigem = new Double(origen.getLongitude());
@@ -64,12 +62,13 @@ public class City implements Comparable<City> {
 		double latitudeDestino = new Double(destino.getLatitude());
 
 		double theta = longitudeOrigem - longitudeDestino;
-		double dist = Math.sin(deg2rad(latitudeOrigem)) * Math.sin(deg2rad(latitudeDestino)) + Math.cos(deg2rad(latitudeOrigem)) * Math.cos(deg2rad(latitudeDestino)) * Math.cos(deg2rad(theta));
-		
+		double dist = Math.sin(deg2rad(latitudeOrigem)) * Math.sin(deg2rad(latitudeDestino))
+				+ Math.cos(deg2rad(latitudeOrigem)) * Math.cos(deg2rad(latitudeDestino)) * Math.cos(deg2rad(theta));
+
 		dist = Math.acos(dist);
 		dist = rad2deg(dist);
 		dist = dist * 60 * 1.1515;
-		
+
 		if (unit.equalsIgnoreCase("K")) {
 			dist = dist * 1.609344;
 		}
@@ -90,11 +89,6 @@ public class City implements Comparable<City> {
 	/* :: This function converts radians to decimal degrees : */
 	private static double rad2deg(double rad) {
 		return (rad * 180 / Math.PI);
-	}
-
-	@Override
-	public int compareTo(City city) {
-		return 0;
 	}
 
 }

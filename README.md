@@ -1,29 +1,17 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+API RESTFull que disponibiliza uma lista de combinação de pares de cidades e a distância entre elas.
 
 ### What is this repository for? ###
 
 * Quick summary
 * Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
+### Implantar e executar ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* `mvn clean`
+* `mvn package`
+* `java -jar target/maxipago-0.0.1-SNAPSHOT.jar`
+* `http://localhost:8080/api/cities.json?unit=k`
+* `http://localhost:8080/api/cities.json?unit=m`
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact

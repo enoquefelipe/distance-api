@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 public class ConnectionFactory {
 
 	@Value("${spring.datasource.url}")
-	private String url = "jdbc:mysql://192.168.15.5:3306/db_maxipago?useTimezone=true&serverTimezone=UTC&useSSL=false";
+	private String url = "jdbc:mysql://localhost:3306/db_maxipago?useTimezone=true&serverTimezone=UTC";
 
 	@Value("${spring.datasource.username}")
 	private String username = "root";
@@ -22,10 +22,6 @@ public class ConnectionFactory {
 
 	public Connection getConnection() throws SQLException {
 
-		System.out.println(url);
-		System.out.println(username);
-		System.out.println(password);
-		
 		try {
 			return DriverManager.getConnection(url, username, password);
 		} catch (SQLException e) {

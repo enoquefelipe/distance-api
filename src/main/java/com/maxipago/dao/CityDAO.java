@@ -25,7 +25,7 @@ public class CityDAO {
 		stmt = connection.prepareStatement(QUERY_FIND_ALL_CITIES);
 		ResultSet rs = stmt.executeQuery();
 
-		List<City> cities = new ArrayList<>();
+		List<City> cities = new ArrayList<City>();
 
 		while (rs.next()) {
 
