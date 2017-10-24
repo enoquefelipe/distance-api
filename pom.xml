@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 	http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
@@ -6,7 +7,7 @@
 	<groupId>com.maxipago</groupId>
 	<artifactId>maxipago</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>Maxi Pago</name>
 	<description>Maxi Pago Rest API</description>
@@ -27,8 +28,6 @@
 		<jackson.version>2.9.0</jackson.version>
 		<mysql.version>6.0.6</mysql.version>
 		<log4j.version>1.2.17</log4j.version>
-
-		<start-class>com.mkyong.NewSpringBootWebApplicationForWAR</start-class>
 
 	</properties>
 
@@ -79,7 +78,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>1.4.2.RELEASE</version>
 				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 				</configuration>
