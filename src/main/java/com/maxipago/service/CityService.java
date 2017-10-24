@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.maxipago.dao.CityDAO;
-import com.maxipago.dao.CityRepository;
 import com.maxipago.model.City;
 import com.maxipago.model.Combination;
 
@@ -24,8 +23,8 @@ public class CityService {
 	@Autowired
 	private CityDAO repositoryJDBC;
 
-	@Autowired
-	private CityRepository repository;
+//	@Autowired
+//	private CityRepository repository;
 
 	public List<City> findAllJDBC() throws SQLException {
 		return repositoryJDBC.findAll();
@@ -33,8 +32,8 @@ public class CityService {
 
 	public List<Combination> getCombinations(String unit) throws SQLException {
 
-		List<City> cities = repository.findAll();
-		// List<City> cities = repositoryJDBC.findAll();
+//		List<City> cities = repository.findAll();
+		List<City> cities = repositoryJDBC.findAll();
 		List<Combination> combinations = new ArrayList<>();
 
 		for (City city : cities) {

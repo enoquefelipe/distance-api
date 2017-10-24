@@ -7,12 +7,12 @@ insert into City (id, name, latitude, longitude) values (5, 'Santos', '-23.94484
 --SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 --SET time_zone = "+00:00";
 --
---CREATE TABLE IF NOT EXISTS `city` (
---  `id` bigint(20) NOT NULL,
---  `name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
---  `latitude` varchar(255) COLLATE utf8_bin DEFAULT NULL,
---  `longitude` varchar(255) COLLATE utf8_bin DEFAULT NULL
---) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+CREATE TABLE IF NOT EXISTS `city` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `latitude` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `longitude` varchar(255) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 --
 --INSERT INTO `city` (`id`, `name`, `latitude`, `longitude`) VALUES
 --(1, 'Atlântida', '-297.861.450.000.000.000', '-500.328.829.999.999.000'),

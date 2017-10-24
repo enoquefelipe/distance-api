@@ -1,17 +1,14 @@
 package com.maxipago.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 /**
  * 
  * @author enoque.felipe
  *
  */
-@Entity
+//@Entity
 public class City implements Comparable<City> {
 
-	@Id
+//	@Id
 	private Long id;
 	private String name;
 	private String latitude;
