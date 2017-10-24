@@ -1,48 +1,51 @@
 # README #
 
-O projeto "maxipago" é uma aplicação web simplificada, construida com Spring Boot. 
+The "maxipago" project is a simplified web application, built with Spring Boot. 
 
-Essa aplicação esta configurda para utilizar o Servelet Container "Tomcat" interno do próprio Spring Boot.
+This application is configured to use Spring Boot internal Servelet Container "Tomcat".
 
-Para executar esse aplicação basta seguir as instruções a baixo.
+To run this application just follow the instructions below.
 
-OBS: O Tomcat interno do spring boot esta configurado para executar na porta 8080, caso prefira você pode alterar.
+OBS: The internal Servelet Container configured to run on port 8080, if you prefer you can change the.
 
 
-### Banco de dados ###
+### Database ###
 
-A aplicação esta configurada para trabalhar com o banco de dados MySQL, então para começar, basta:
+The application is configured to work with the MySQL database, so to begin with, just:
 
-* Criar o banco de dados com o nome que preferir
-* Importar o script de inicialização que esta localizado na pasta: maxipago/src/main/resources/import.sql
-* Altere os dados de conexão "url", "username", "password" na classe: maxipago/src/main/java/com/maxipago/util/ConnectionFactory.java 
+	* Create the database with the name of your preference
 
-### Implantar e executar a aplicação ###
+	* Import the SQL script located in folder: maxipago/src/main/resources/import.sql
 
-```
+	* Change coonnection variables "url", "username", "password" in the class: maxipago/src/main/java/com/maxipago/util/ConnectionFactory.java 
 
-#### Execute os seguintes comando Maven
-
-Esse é um projeto Maven, para executar, basta executar os seguintes comandos:
-
-* mvn clean
-
-* mvn package
-
-* java -jar target/maxipago-0.0.1-SNAPSHOT.jar
+### Deploy and run ###
 
 ```
-#### Acesso a aplicação
 
-Para acessar a API utilizando, basta utilizar a URL abaixo passando o parametro de unidade "K" ou "M"
+This is an maven project, to run, just run the commands:
 
-Exemplo: 
-	* Request em formato JSON: http://localhost:8080/api/cities.json?unit=k
-	* Request em formato XML: http://localhost:8080/api/cities.json?unit=m
+	* mvn clean
+
+	* mvn package
+
+	* java -jar target/maxipago-0.0.1-SNAPSHOT.jar
+
+```
+#### Application access
+
+To access the API using, just use the URL below by passing the unit parameter "K" or "M"
+
+Examplo: 
+
+	* Request in JSON format: http://localhost:8080/api/cities.json?unit=k
+	
+	* Request in XML format: http://localhost:8080/api/cities.json?unit=m
 
 
 
-#### Algoritmo de combinação
+#### Combination Algorithm
 
-O algoritimo de combinação utilizado foi o da "Geo Datasource"
-* http://www.geodatasource.com/developers/java
+The combination algorithm used was the "Geo Datasource"
+
+	* http://www.geodatasource.com/developers/java
