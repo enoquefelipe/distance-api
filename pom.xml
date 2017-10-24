@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 	http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
@@ -7,7 +6,7 @@
 	<groupId>com.maxipago</groupId>
 	<artifactId>maxipago</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>Maxi Pago</name>
 	<description>Maxi Pago Rest API</description>
@@ -29,6 +28,8 @@
 		<mysql.version>6.0.6</mysql.version>
 		<log4j.version>1.2.17</log4j.version>
 
+		<start-class>com.mkyong.NewSpringBootWebApplicationForWAR</start-class>
+
 	</properties>
 
 	<dependencies>
@@ -43,6 +44,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<version>${dev.devtools}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
@@ -72,9 +79,9 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>1.4.2.RELEASE</version>
 				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
-					<fork>true</fork>
 				</configuration>
 				<executions>
 					<execution>
