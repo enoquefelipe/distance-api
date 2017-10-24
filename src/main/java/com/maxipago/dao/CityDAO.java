@@ -12,6 +12,11 @@ import org.springframework.stereotype.Repository;
 import com.maxipago.model.City;
 import com.maxipago.util.ConnectionFactory;
 
+/**
+ * 
+ * @author enoque.felipe
+ *
+ */
 @Repository
 public class CityDAO {
 

@@ -53,6 +53,15 @@ public class City {
 
 	/* end Getters and Setters */
 
+	/**
+	 * This routine calculates the distance between two points (given the latitude/longitude of those points). 
+	 * It is being used to calculate the distance between two locations using GeoDataSource (TM) prodducts
+	 * 
+	 * @param origen
+	 * @param destino
+	 * @param unit
+	 * @return
+	 */
 	public static Combination distance(City origen, City destino, String unit) {
 
 		double longitudeOrigem = new Double(origen.getLongitude());
@@ -81,12 +90,12 @@ public class City {
 		return comb;
 	}
 
-	/* :: This function converts decimal degrees to radians : */
+	/* This function converts decimal degrees to radians */
 	private static double deg2rad(double deg) {
 		return (deg * Math.PI / 180.0);
 	}
 
-	/* :: This function converts radians to decimal degrees : */
+	/* This function converts radians to decimal degrees */
 	private static double rad2deg(double rad) {
 		return (rad * 180 / Math.PI);
 	}

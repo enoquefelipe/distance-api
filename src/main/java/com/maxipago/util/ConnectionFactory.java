@@ -7,6 +7,11 @@ import java.sql.SQLException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 
+/**
+ * 
+ * @author enoque.felipe
+ *
+ */
 public class ConnectionFactory {
 
 	@Value("${spring.datasource.url}")
@@ -25,7 +30,7 @@ public class ConnectionFactory {
 		try {
 			return DriverManager.getConnection(url, username, password);
 		} catch (SQLException e) {
-			logger.error("Erro ao conectar com o banco de dados");
+			logger.error("Error connecting to database");
 			throw new SQLException(e);
 		}
 	}
