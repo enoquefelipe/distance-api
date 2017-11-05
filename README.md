@@ -15,7 +15,7 @@ The application is configured to work with the MySQL database, so to begin with,
 
 	* Create the database with the name of your preference
 
-	* Import the SQL script located in folder: maxipago/src/main/resources/import.sql
+	* Import the SQL script located in folder: distance-api/src/main/resources/import.sql
 
 	* Change coonnection variables "url", "username", "password" in the class: maxipago/src/main/java/com/maxipago/util/ConnectionFactory.java 
 
@@ -29,7 +29,7 @@ This is an maven project, to run, just run the commands:
 
 	* mvn package
 
-	* java -jar target/maxipago-0.0.1-SNAPSHOT.jar
+	* java -jar distance-api/maxipago-0.0.1-SNAPSHOT.jar
 
 ```
 #### Application access
@@ -39,7 +39,7 @@ To access the API using, just use the URL below by passing the unit parameter "K
 Examplo: 
 
 	* Request in JSON format: http://localhost:8080/api/cities.json?unit=k
-	
+
 	* Request in XML format: http://localhost:8080/api/cities.json?unit=m
 
 
