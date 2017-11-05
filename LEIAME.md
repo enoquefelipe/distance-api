@@ -1,6 +1,6 @@
 # README #
 
-O projeto "maxipago" é uma aplicação web simplificada, construida com Spring Boot. 
+O projeto "distance-api" é uma aplicação web simplificada, construida com Spring Boot. 
 
 Essa aplicação esta configurda para utilizar o Servelet Container "Tomcat" interno do próprio Spring Boot.
 
@@ -15,22 +15,19 @@ A aplicação esta configurada para trabalhar com o banco de dados MySQL, então
 
 	* Criar o banco de dados com o nome que preferir
 
-	* Importar o script SQL que esta localizado na pasta: maxipago/src/main/resources/import.sql
+	* Importar o script SQL que esta localizado na pasta: distance-api/src/main/resources/import.sql
 
-	* Alterar as variáveis coonexão "url", "username", "password" na classe: maxipago/src/main/java/com/maxipago/util/ConnectionFactory.java 
+	* Alterar as variáveis coonexão "url", "username", "password" na classe: distance-api/src/main/java/com/distance/util/ConnectionFactory.java 
 
 ### Implantar e executar a aplicação ###
 
-```
-
 Esse é um projeto Maven, para executar, basta executar os seguintes comandos:
+```
+	mvn clean
 
-	* mvn clean
+	mvn package
 
-	* mvn package
-
-	* java -jar target/maxipago-0.0.1-SNAPSHOT.jar
-
+	java -jar target/distance-api-0.0.1-SNAPSHOT.jar
 ```
 #### Acesso a aplicação
 
