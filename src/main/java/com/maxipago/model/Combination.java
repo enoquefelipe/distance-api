@@ -8,7 +8,9 @@ package com.maxipago.model;
 public class Combination {
 
 	private String originCity;
+	
 	private String destinationCity;
+	
 	private Double distance;
 
 	/* Getters and Setters */

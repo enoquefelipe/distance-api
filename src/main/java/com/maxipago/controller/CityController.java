@@ -26,11 +26,18 @@ import com.maxipago.service.CityService;
 @RequestMapping(value = "/api")
 public class CityController {
 
-	final static Logger logger = Logger.getLogger(CityController.class);
+	private final static Logger logger = Logger.getLogger(CityController.class);
 
 	@Autowired
 	private CityService service;
 
+	/**
+	 * 
+	 * 
+	 * @param unit
+	 * @return
+	 * 
+	 */
 	@RequestMapping(value = "/cities", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE }, consumes = MediaType.ALL_VALUE)
 	public ResponseEntity<DistanceDTO> listaCitys(@RequestParam("unit") String unit) {
 

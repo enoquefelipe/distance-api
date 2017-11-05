@@ -12,7 +12,9 @@ import com.maxipago.model.Combination;
 public class DistanceDTO {
 
 	private int records;
+	
 	private String message;
+	
 	private List<Combination> combinations;
 
 	/* Getters and Setters */

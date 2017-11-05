@@ -25,6 +25,13 @@ public class ConnectionFactory {
 
 	final static Logger logger = Logger.getLogger(ConnectionFactory.class);
 
+	/**
+	 * 
+	 * Connection Factory method for JDBC Database Connection
+	 * @return
+	 * @throws SQLException
+	 * 
+	 */
 	public Connection getConnection() throws SQLException {
 
 		try {

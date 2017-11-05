@@ -8,8 +8,11 @@ package com.maxipago.model;
 public class City {
 
 	private Long id;
+	
 	private String name;
+	
 	private String latitude;
+	
 	private String longitude;
 
 	/* Getters and Setters */

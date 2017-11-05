@@ -23,14 +23,33 @@ public class CityService {
 	@Autowired
 	private CityDAO repository;
 
+	/**
+	 * 
+	 * 
+	 * @return
+	 * @throws SQLException
+	 * 
+	 */
 	public List<City> findAllJDBC() throws SQLException {
 		return repository.findAll();
 	}
 
+	/**
+	 * 
+	 * Combination method
+	 * 
+	 * This routine tests all combinations of items on the list, 
+	 * without repetitions and ambiguity between items.
+	 * 
+	 * @param unit
+	 * @return
+	 * @throws SQLException
+	 * 
+	 */
 	public List<Combination> getCombinations(String unit) throws SQLException {
 
 		List<City> cities = repository.findAll();
-		
+
 		List<Combination> combinations = new ArrayList<Combination>();
 
 		for (City city : cities) {
@@ -44,7 +63,9 @@ public class CityService {
 				}
 			}
 		}
+		
 		return combinations;
+		
 	}
 
 }

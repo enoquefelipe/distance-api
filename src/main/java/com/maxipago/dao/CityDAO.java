@@ -21,9 +21,18 @@ import com.maxipago.util.ConnectionFactory;
 public class CityDAO {
 
 	private Connection connection;
+	
 	private PreparedStatement stmt;
+	
 	private static final String QUERY_FIND_ALL_CITIES = "SELECT * FROM city";
 
+	/**
+	 * 
+	 * 
+	 * @return
+	 * @throws SQLException
+	 * 
+	 */
 	public List<City> findAll() throws SQLException {
 
 		connection = new ConnectionFactory().getConnection();
