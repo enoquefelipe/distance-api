@@ -1,4 +1,4 @@
-package com.maxipago.model;
+package com.distanciapi.model;
 
 /**
  * 

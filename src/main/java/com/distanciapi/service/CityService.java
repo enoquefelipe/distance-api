@@ -1,4 +1,4 @@
-package com.maxipago.service;
+package com.distanciapi.service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -8,9 +8,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.maxipago.dao.CityDAO;
-import com.maxipago.model.City;
-import com.maxipago.model.Combination;
+import com.distanciapi.dao.CityDAO;
+import com.distanciapi.model.City;
+import com.distanciapi.model.Combination;
 
 /**
  * 
@@ -50,7 +50,7 @@ public class CityService {
 
 		List<City> cities = repository.findAll();
 
-		List<Combination> combinations = new ArrayList<Combination>();
+		List<Combination> combinations = new ArrayList<>();
 
 		for (City city : cities) {
 

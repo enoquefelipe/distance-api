@@ -1,4 +1,4 @@
-package com.maxipago.dao;
+package com.distanciapi.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,10 +7,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.maxipago.model.City;
-import com.maxipago.util.ConnectionFactory;
+import com.distanciapi.model.City;
+import com.distanciapi.util.ConnectionFactory;
 
 /**
  * 
@@ -20,6 +21,9 @@ import com.maxipago.util.ConnectionFactory;
 @Repository
 public class CityDAO {
 
+	@Autowired
+	private ConnectionFactory connectionFactory;
+	
 	private Connection connection;
 	
 	private PreparedStatement stmt;
@@ -35,11 +39,11 @@ public class CityDAO {
 	 */
 	public List<City> findAll() throws SQLException {
 
-		connection = new ConnectionFactory().getConnection();
+		connection = connectionFactory.getConnection();
 		stmt = connection.prepareStatement(QUERY_FIND_ALL_CITIES);
 		ResultSet rs = stmt.executeQuery();
 
-		List<City> cities = new ArrayList<City>();
+		List<City> cities = new ArrayList<>();
 
 		while (rs.next()) {
 

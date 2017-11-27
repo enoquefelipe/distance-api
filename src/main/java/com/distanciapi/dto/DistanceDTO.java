@@ -1,8 +1,8 @@
-package com.maxipago.dto;
+package com.distanciapi.dto;
 
 import java.util.List;
 
-import com.maxipago.model.Combination;
+import com.distanciapi.model.Combination;
 
 /**
  * 

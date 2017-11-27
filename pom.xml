@@ -4,13 +4,13 @@
 	http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.maxipago</groupId>
-	<artifactId>maxipago</artifactId>
+	<groupId>com.distanciapi</groupId>
+	<artifactId>distanci-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Maxi Pago</name>
-	<description>Maxi Pago Rest API</description>
+	<name>distanci-api</name>
+	<description>Disstanci Rest API</description>
 
 	<properties>
 
