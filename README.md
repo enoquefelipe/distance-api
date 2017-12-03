@@ -17,7 +17,7 @@ The application is configured to work with the MySQL database, so to begin with,
 
 	* Import the SQL script located in folder: distance-api/src/main/resources/import.sql
 
-	* Change coonnection variables "url", "username", "password" in the class: distance-api/src/main/java/com/distance/util/ConnectionFactory.java 
+	* Change coonnection variables "url", "username" and "password" in the file: distance-api/src/main/resources/jdbc.properties 
 
 ### Deploy and run ###
 
@@ -25,11 +25,11 @@ The application is configured to work with the MySQL database, so to begin with,
 
 This is an maven project, to run, just run the commands:
 
-	* mvn clean
+	mvn clean
 
-	* mvn package
+	mvn package
 
-	* java -jar target/distance-api-0.0.1-SNAPSHOT.jar
+	java -jar target/distance-api-0.0.1-SNAPSHOT.jar
 
 ```
 #### Application access
