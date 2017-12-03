@@ -21,16 +21,15 @@ A aplicação esta configurada para trabalhar com o banco de dados MySQL, então
 
 ### Implantar e executar a aplicação ###
 
+Esse é um projeto Maven, para realizar o build e o deploy basta executar os seguintes comandos:
+
 ```
 
-Esse é um projeto Maven, para realizar o build e o deploy basta executar os seguintes comandos:
-	
 	mvn clean
 
 	mvn package
 
 	java -jar target/distance-api-0.0.1-SNAPSHOT.jar
-	
 ```
 #### Acesso a aplicação
 

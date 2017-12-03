@@ -21,9 +21,8 @@ The application is configured to work with the MySQL database, so to begin with,
 
 ### Deploy and run ###
 
-```
-
 This is an maven project, to run, just run the commands:
+```
 
 	mvn clean
 
